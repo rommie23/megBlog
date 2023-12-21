@@ -51,12 +51,14 @@ function Header() {
           <ul className='flex ml-auto'>
             {navItems.map((item) => 
             item.active ? (
+              <NavLink>
                 <li key={item.name}>
                   <button
                   onClick={() => navigate(item.slug)}
                   className={`inline-block py-2 duration-200 hover:bg-green-500 rounded-full px-2 sm:px-6`}
                   >{item.name}</button>
                 </li>
+              </NavLink>
             ) : null
             )}
             {authStatus && (
